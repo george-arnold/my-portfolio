@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Varela Round', sans-serif;
+
+  }
+/* This is going to alter based on mobile vs desktop*/
+  nav {
+    display:flex;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+  }
+
+  .center-icon {
+    font-size: 40px;
+  }
+
+  .bio {
+    margin: 0 auto;
+    padding: 20px;
+  }
