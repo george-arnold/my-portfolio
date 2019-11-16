@@ -6,52 +6,60 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>George Arnold Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c99c3b13e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
 </head>
 <body>
+  <div class= "wrapper">
     <nav>
-        <div class= "tab"><h2>Projects</h2></Projects></div>
-        <div class= "tab"><h2>About Me</h2></div>
-        <div class= "tab"><h2>Contact Me</h2></div>
+        <div class= "tab tab-1 button"><h2>Projects</h2></Projects></div>
+        <div class= "tab tab-2 button active-tab"><h2>About</h2></div>
+        <div class= "tab tab-3 button"><h2>Contact</h2></div>
     </nav>
-    <main>
-            <h1> Hi I'm George. I'm a Full Stack Web Developer</h1>
-            <span class="center-icon"> &lt; George &gt; &lt; Arnold / &gt;</span>
+    <section class="bio">
+            <h2> Hey, I'm George. I'm a Full Stack Web Developer from Annapolis, MD.</h2>
+            <p> Three things you need to know about me: 
+                <ul>
+
+               <li> Whether it's making a new puzzle for my D&D players, or a city-wide treasure hunt for my wife's birthday, I have a knack for creative thinking. </li>
+                <li>I do my best and most passionate work when I am solving problems. </li>
+                <li>Seven years as a teacher, of math and computer science, has developed my greatest strength as a web developer. I’ve mastered how to learn.</li>
+                </ul>
+                </p>
+            <div class="main-icon">
+           <img src="images/Me.png">
+            <a class ="button" href= "https://github.com/george-arnold?tab=repositories">Git Hub</a>
+            <a class ="button" href="https://www.linkedin.com/in/george-arnold-4382a9120/">Linked In</a>
+            </div>
             
-    </main>
-    <section class="bio"> 
-            <p> Bio: When I'm not playing D&D, or watching sci-fi media, I enjoy creating things. Whether it's a new puzzle for my D&D players, or a city-wide treasure hunt for my wife's birthday, I have a knack for creative thinking. 
-            I do my best and most passionate work when I am solving problems. 
-            Seven years as a teacher of math, technology, and computer science, has developed my greatest strength as a web developer. I’ve mastered how to learn.
-            I am aware that web development is a never-ending journey of learning, and I am ready to start that journey. 
-            </p>
+   
+
     </section>
-    <section- class="project project-1">
+    <section class="project project-1">
         <h2>The American Education Quiz</h2>
-        <p>The project displays the use of:
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JS</li>
-            <li>Jquery</li>
-         <ul>
+
         <img src="images/American Quiz.png" alt="Screenshot of Quiz App">
-        
-        <!-- br tags will be removed after wireframe phase-->
-        <br>
-         <a href=" https://george-arnold.github.io/quiz-application/">Live Demo</a>
-         <br>
-         <a href="https://github.com/george-arnold/quiz-application">Github Repo</a>
-            
+        <ul>
+            <li><i class="fab fa-html5"></i></li>
+            <li><i class="fab fa-css3-alt"></i></li>
+            <li><i class="fab fa-js"></i></li>
+            <li><img src="images/jQ.png"></li>
+        </ul>
+        <div class="project-buttons">
+         <a class= "button" href=" https://george-arnold.github.io/quiz-application/">Live Demo</a>
+  
+         <a class= "button" href="https://github.com/george-arnold/quiz-application">Github Repo</a>
+        </div>
     </section>
 
-    <footer class="contact-info">
+    <section class="contact-info">
         <h2> Contact Info</h2>
         <p>Name: George Arnold</p>
         <p>Email: George.Arnold.88@gmail.com</p>
         <p>Phone: (301)- 633- 9260</p>
-    </footer>
+    </section>
+  </div>
 <script src="main.js"> </script>
 </body>
 </html>
