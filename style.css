@@ -60,7 +60,7 @@
   border-radius: 100px;
   width: 200px;
 }
-  .bio a, .project a { 
+  .bio a, .project a, .contact-info a{ 
     display:inline-block;
     border: 1px solid black;
     border-radius: 10px;
