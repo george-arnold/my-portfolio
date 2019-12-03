@@ -1,5 +1,3 @@
-// add an event listener that shows and hides HTML for each section  (this will involve absolute positioning of content)
-
 
 function handleNavigation() {
 
