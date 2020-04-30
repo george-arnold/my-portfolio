@@ -1,85 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>George Arnold Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/0c99c3b13e.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="crossorigin="anonymous"></script>
-</head>
-<body>
-  <div class= "wrapper">
-    <nav>
-        <div class= "tab tab-1 button"><h2>Projects</h2></Projects></div>
-        <div class= "tab tab-2 button active-tab"><h2>About</h2></div>
-        <div class= "tab tab-3 button"><h2>Contact</h2></div>
-    </nav>
-    <section class="bio">
-            <h2> Hey, I'm George. I'm a Full Stack Web Developer from Annapolis, MD.</h2>
-            <p> Three things you need to know about me: 
-                <ul>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <div class="tab tab-1 button">
+          <h2>Projects</h2>
+        </div>
+        <div class="tab tab-2 button active-tab">
+          <h2>About</h2>
+        </div>
+        <div class="tab tab-3 button">
+          <h2>Contact</h2>
+        </div>
+      </nav>
+      <section class="bio">
+        <h2>
+          Hey, I'm George. I'm a Full Stack Web Developer from
+          <span class="location">Annapolis, MD.</span>
+        </h2>
+        <p>Three things you need to know about me:</p>
+        <ul>
+          <li>
+            Whether it's making a new puzzle for my D&D players, or a city-wide
+            treasure hunt for my wife's birthday, I have a knack for creative
+            thinking.
+          </li>
+          <li>
+            I do my best and most passionate work when I am solving problems.
+          </li>
+          <li>
+            Seven years as a teacher, of math and computer science, has
+            developed my greatest strengths as a web developer, learning and
+            communication.
+          </li>
+        </ul>
+        <div class="main-icon">
+          <img src="images/Me.png" />
+          <a
+            class="button"
+            href="https://github.com/george-arnold?tab=repositories"
+            >Git Hub</a
+          >
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/george-arnold-4382a9120/"
+            >Linked In</a
+          >
+        </div>
+      </section>
+      <section class="project dungeoneer-project">
+        <h2>The Dungeoneer's Toolkit</h2>
+        <p>
+          April 2020- I built a web-app to track character information for table
+          top role playing games.
+        </p>
+        <img
+          src="images/CharacterLibPic.png"
+          alt="Screenshot of Dungeoneer App"
+        />
+        <p>
+          Technologies: React.js, Node.js, SQL, JS, CSS, JSX, Formik, Yup, Jest
+        </p>
+        <div class="project-buttons">
+          <a class="button" href="https://the-dungeoneers-toolkit.now.sh/"
+            >Live Demo</a
+          >
+          <a
+            class="button"
+            href="https://github.com/george-arnold/dungeoneer-toolkit-client"
+            >Frontend Client Repo</a
+          >
+          <a
+            class="button"
+            href="https://github.com/george-arnold/dungeoneer-toolkit-api"
+            >RESTfulAPI Repo</a
+          >
+        </div>
+      </section>
+      <section class="project simple-budget-project">
+        <h2>Simple Budget</h2>
+        <p>
+          March 2020- I built a very simple app, with mobile-first design, to
+          help people keep track of their budgets
+        </p>
+        <img
+          src="images/simplebudget.png"
+          alt="Screenshot of Simple Budget App"
+        />
 
-               <li> Whether it's making a new puzzle for my D&D players, or a city-wide treasure hunt for my wife's birthday, I have a knack for creative thinking. </li>
-                <li>I do my best and most passionate work when I am solving problems. </li>
-                <li>Seven years as a teacher, of math and computer science, has developed my greatest strength as a web developer. I’ve mastered how to learn.</li>
-                </ul>
-                </p>
-            <div class="main-icon">
-           <img src="images/Me.png">
-            <a class ="button" href= "https://github.com/george-arnold?tab=repositories">Git Hub</a>
-            <a class ="button" href="https://www.linkedin.com/in/george-arnold-4382a9120/">Linked In</a>
-            </div>
-            
-   
+        <p>Technologies: React.js, Node.js, SQL, JS, CSS, JSX, Jest</p>
+        <div class="project-buttons">
+          <a class="button" href="https://simple-budget.georgearnold88.now.sh/"
+            >Live Demo</a
+          >
+          <a
+            class="button"
+            href="https://github.com/george-arnold/simple-budget/tree/master/simple-budget-client"
+            >Frontend Client Repo</a
+          >
+          <a
+            class="button"
+            href="https://github.com/george-arnold/simple-budget-api"
+            >RESTfulAPI Repo</a
+          >
+        </div>
+      </section>
+      <section class="project bubble-project">
+        <h2>Get Out of Your Bubble</h2>
+        <p>
+          Dec 2019- Many people live in a bubble, where everything you really
+          need is within a 2-3 mile radius of home. This app helps you explore
+          outside of your bubble.
+        </p>
+        <img
+          src="images/get-out-of-your-bubble.png"
+          alt="Screenshot of Bubble App"
+        />
+        <ul>
+          <p>Technologies: jQuery, Javascript, HTML5, CSS3</p>
+        </ul>
+        <div class="project-buttons">
+          <a
+            class="button"
+            href=" https://george-arnold.github.io/get-out-of-your-bubble-api-project/"
+            >Live Demo</a
+          >
 
-    </section>
-    <section class="project project-1">
-            <h2>Get Out of Your Bubble</h2>
-            <p>I live in Annapolis, MD. Here, like many other self-contained towns, everything you really need is within a 2-3 mile radius of home. It makes a "bubble" that people oftentimes never leave for anything beyond their 9-5. This app was made to encourage people to easily find places to go, and things to do, outside of their hometown. The user inputs where they live, what kind of event they're looking for, and the app presents them with a number of options. The user can click on those options for more information. 
-                </p>
-            <img src= "images/get-out-of-your-bubble.png" alt="Screenshot of Quiz App">
-            <ul>
-                <li><i class="fab fa-html5"></i></li>
-                <li><i class="fab fa-css3-alt"></i></li>
-                <li><i class="fab fa-js"></i></li>
-                <li><img src="images/jQ.png"></li>
-            </ul>
-            <div class="project-buttons">
-             <a class= "button" href=" https://george-arnold.github.io/get-out-of-your-bubble-api-project/">Live Demo</a>
-      
-             <a class= "button" href="https://github.com/george-arnold/get-out-of-your-bubble-api-project">Github Repo</a>
-            </div>
-    </section>
-    <section class="project project-2">
-            <h2>The American Education Quiz</h2>
-            <p>A built-from-sctach quiz app that uses jQuery and Javascript to test your knowledge of American Education.</p>
-            <img src="images/American Quiz.png" alt="Screenshot of Quiz App">
-            <ul>
-                <li><i class="fab fa-html5"></i></li>
-                <li><i class="fab fa-css3-alt"></i></li>
-                <li><i class="fab fa-js"></i></li>
-                <li><img src="images/jQ.png"></li>
-            </ul>
-            <div class="project-buttons">
-             <a class= "button" href=" https://george-arnold.github.io/quiz-application/">Live Demo</a>
-      
-             <a class= "button" href="https://github.com/george-arnold/quiz-application">Github Repo</a>
-            </div>
-    </section>
-    
-    <section class="contact-info">
-        <h2> Contact Info</h2>
+          <a
+            class="button"
+            href="https://github.com/george-arnold/get-out-of-your-bubble-api-project"
+            >Github Repo</a
+          >
+        </div>
+      </section>
+      <section class="project quiz-project">
+        <h2>The American Education Quiz</h2>
+        <p>
+          A built-from-sctach quiz app that uses jQuery and Javascript to test
+          your knowledge of American Education.
+        </p>
+        <img src="images/American Quiz.png" alt="Screenshot of Quiz App" />
+        <p>Technologies: jQuery, Javascript, HTML5, CSS3</p>
+        <div class="project-buttons">
+          <a
+            class="button"
+            href=" https://george-arnold.github.io/quiz-application/"
+            >Live Demo</a
+          >
+
+          <a
+            class="button"
+            href="https://github.com/george-arnold/quiz-application"
+            >Github Repo</a
+          >
+        </div>
+      </section>
+
+      <section class="contact-info">
+        <h2>Contact Info</h2>
         <p>Name: George Arnold</p>
         <p>Email: George.Arnold.88@gmail.com</p>
         <p>Phone: (301)- 633- 9260</p>
-        <a class ="button" href= "https://github.com/george-arnold?tab=repositories">Git Hub</a>
-        <a class ="button" href="https://www.linkedin.com/in/george-arnold-4382a9120/">Linked In</a>
-
-    </section>
-  </div>
-<script src="main.js"> </script>
-</body>
+        <div class="flex-container">
+          <a
+            class="button"
+            href="https://github.com/george-arnold?tab=repositories"
+            >Git Hub</a
+          >
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/george-arnold-4382a9120/"
+            >Linked In</a
+          >
+        </div>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
 </html>
