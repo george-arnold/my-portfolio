@@ -1,3 +1,4 @@
+/* overall control */
 * {
   box-sizing: border-box;
 }
@@ -12,47 +13,89 @@ body {
   font-family: "Roboto Slab", serif;
   color: black;
 }
+h2 {
+  font-size: 18px;
+  margin-top: 0;
+  text-align: center;
+}
 ul {
-  list-style-type: "→";
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  box-shadow: 3px 3px black;
 }
 .wrapper {
-  width: 300px;
+  width: 95%;
   margin: 0 auto;
   border: 5px solid rgba(26, 25, 25, 0.2);
-  padding: 20px;
-  border-radius: 100px;
+  padding: 10px;
+  border-radius: 50px;
   color: white;
   font-weight: 400;
   background-color: rgba(26, 25, 25, 0.7);
 }
-/* This is going to alter based on mobile vs desktop*/
+.button {
+  -webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
+  transition: 0.5s;
+  border-radius: 5px;
+  margin: 5px;
+}
+.button:hover {
+  border-bottom: 2px solid rgb(0, 204, 180);
+  color: rgb(0, 204, 180);
+  cursor: pointer;
+}
+.page-top {
+  margin-top: 20px;
+}
+
+.contact {
+  padding: 5px;
+}
+.contact li {
+  text-align: center;
+}
+/* nav content */
 nav {
   display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid white;
-  padding: 30px 20px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 nav h2 {
-  font-size: 24px;
+  font-size: 16px;
   margin: 0;
 }
 .tab {
-  border: 1px solid white;
+  border-bottom: 2px solid white;
   border-radius: 10px;
-  padding: 10px;
-  margin: 0px 5px;
-  background-color: black;
+  padding: 8px;
+  margin: 5px;
+  text-align: center;
 }
-.tab:hover {
-  cursor: pointer;
-}
-
 .active-tab {
-  border: 1px solid rgb(214, 250, 8);
-  color: rgb(214, 250, 8);
+  border-bottom: 2px solid rgb(0, 204, 180);
+  color: rgb(0, 204, 180);
 }
 
-/* main section of About */
+/* About Me/Bio specific  */
+.question-box {
+  margin-top: 20px;
+}
+.question {
+  background-color: rgb(193, 61, 5);
+  padding: 5px;
+  margin-bottom: 0px;
+  margin-top: 30px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 5px;
+}
+.answer {
+  padding: 10px;
+  margin-top: 5px;
+  font-size: 16px;
+}
 .main-icon {
   text-align: center;
   margin: 0 auto;
@@ -66,45 +109,30 @@ nav h2 {
   border-radius: 100px;
   width: 200px;
 }
-.bio a,
-.project a,
-.contact-info a {
-  display: inline-block;
-  border: 1px solid white;
-  border-radius: 10px;
-  text-decoration: none;
-  padding: 5px;
-  color: white;
-}
+
 .bio li {
   margin-bottom: 20px;
 }
-.button {
-  -webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
-  transition: 0.5s;
-  background-color: black;
-}
-.button:hover {
-  border: 1px solid rgb(214, 250, 8);
-  color: rgb(214, 250, 8);
-}
+
 .bio h2 {
   text-align: center;
 }
-h2 {
-  font-size: 24px;
-}
+
 .bio {
   margin: 0 auto;
   padding: 10px;
 }
-.bio ul {
-  margin-bottom: 20px;
-}
-.bio p {
-  font-size: 18px;
-}
 
+.bio a,
+.contact-info a {
+  display: inline-block;
+  border: 1px solid rgb(0, 204, 180);
+  border-radius: 10px;
+  text-decoration: none;
+  padding: 10px;
+  color: rgb(0, 204, 180);
+  box-shadow: 3px 3px rgb(0, 0, 0);
+}
 .contact-info {
   width: 90%;
   margin: 10px auto;
@@ -115,68 +143,124 @@ h2 {
   overflow: hidden;
   white-space: nowrap;
 }
+
 /*project tab */
+
+.demo {
+  width: 50%;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
 .project img {
   width: 100%;
 }
-
 .project {
   width: 100%;
-}
-.project-buttons {
   display: flex;
-  justify-content: center;
-  padding-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
+.project-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
 .project-buttons a {
+  width: 47%;
   border: 1px solid white;
   margin: 0 10px;
-  color: white;
   text-align: center;
-  background-color: black;
 }
 .project ul {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  padding: 2px;
+  margin-top: 5px;
+  margin-bottom: 20px;
 }
-
-.project ul img {
-  width: 40px;
-}
-
-.dungeoneer-project h2 {
-  margin-top: 30px;
-  background-color: rgb(231, 230, 220);
-  color: rgb(212, 50, 45);
-}
-.simple-budget-project h2 {
-  margin-top: 50px;
-  background-color: #87f38a;
-  color: black;
-}
-.bubble-project h2 {
-  margin-top: 50px;
-  background-color: black;
-  color: white;
-}
-.quiz-project h2 {
-  margin-top: 50px;
-  background-color: #021153;
-  color: white;
+/* controls paragraphs */
+.about-project {
+  margin-bottom: 10px;
 }
 .project h2 {
+  width: 90%;
+  margin-top: 40px;
   text-align: center;
   border-radius: 20px;
+  padding: 6px;
+  margin-bottom: 0;
+}
+.project li {
+  border-bottom: 2px solid white;
+  margin: 3px;
+  padding: 2px;
+  width: 50px;
+  font-size: 12px;
+  text-align: center;
 }
 
+.version-control {
+  margin: 0px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+
+/* dungeoneer project */
+.dungeoneer-project {
+  background-color: rgb(231, 230, 220);
+  color: rgb(212, 50, 45);
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+
+.dungeoneer-demo {
+  color: rgb(231, 230, 220);
+  background-color: rgb(212, 50, 45);
+}
+/* simple-budget project */
+.simple-budget-project {
+  background-color: #54f359;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+
+.simple-budget-demo {
+  background-color: black;
+  color: #54f359;
+}
+
+/* bubble-project */
+.bubble-project {
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+.bubble-demo {
+  background-color: white;
+  color: black;
+}
+.single-project-button {
+  width: 70%;
+}
 img {
   border-radius: 20px;
 }
 
 p {
+  text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -186,13 +270,74 @@ p {
   justify-content: center;
 }
 /*media queries*/
+/* phones over 400px */
 @media only screen and (min-width: 400px) {
-  .wrapper {
-    width: 80%;
+  nav h2 {
+    font-size: 20px;
+  }
+  .question {
+    font-size: 20px;
   }
 }
-@media only screen and (min-width: 800px) {
+
+@media only screen and (min-device-width: 768px) {
+  main {
+    width: 90%;
+  }
+  .demo {
+    font-size: 20px;
+  }
+  .project img {
+    width: 80%;
+  }
+  .project h2 {
+    font-size: 24px;
+  }
+  .project {
+    margin-bottom: 20px;
+  }
+  nav h2 {
+    font-size: 24px;
+  }
+  nav {
+    justify-content: space-around;
+  }
+  .active-tab {
+    border-width: 4px;
+  }
+  .tab {
+    border-width: 4px;
+  }
+  .button:hover {
+    border-width: 4px;
+  }
+
+  .bio a,
+  .contact-info a {
+    border: 2px solid rgb(0, 204, 180);
+    font-size: 20px;
+  }
+  .contact-info h2 {
+    font-size: 20px;
+  }
+  address {
+    font-size: 18px;
+  }
   .wrapper {
-    width: 627.19px;
+    width: 75%;
+  }
+}
+@media only screen and (min-device-width: 1224px) {
+  .questions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .question-box {
+    width: 45%;
+  }
+  .project li {
+    font-size: 14px;
+    width: 60px;
   }
 }
