@@ -147,12 +147,13 @@ nav h2 {
 /*project tab */
 
 .demo {
-  width: 50%;
+  width: 25%;
   font-weight: bold;
   text-align: center;
-  padding: 5px;
+  padding: 20px;
   margin-top: 10px;
   margin-bottom: 5px;
+  border-radius: 20px;
 }
 
 .project img {
