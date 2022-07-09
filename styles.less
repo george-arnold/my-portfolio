@@ -2,16 +2,20 @@
 * {
   box-sizing: border-box;
 }
+@primary: #1572A1;
+@secondary: #9AD0EC;
+@tertiary: #EFDAD7;
+@accent: #E3BEC6;
+@charcoal: #28282B;
+@cubicBezier: cubic-bezier(.17,.67,.83,.67);
+
 html {
-  width: 100%;
-  background: url("images/pic1.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+
 }
 
 body {
-  font-family: "Roboto Slab", serif;
-  color: black;
+  font-family: "Poppins", serif;
+  background: @primary;
 }
 h2 {
   font-size: 18px;
@@ -23,27 +27,87 @@ ul {
 }
 a {
   text-decoration: none;
-  box-shadow: 3px 3px black;
 }
+.main-nav {
+  background: @secondary;
+  margin: -8px -16px 32px;
+}
+
+.tab {
+  position: relative;
+}
+.tab ul {
+  margin: 0;
+  padding:  12px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap:  8px;
+  position: absolute;
+  background: @secondary;
+  left: 50%;
+  transform: translate(-50%, -200px);
+  transition-duration: .25s;
+  transition-timing-function: @cubicBezier;
+}
+
+.tab > ul li::before {
+  content:attr(title);
+    background: @tertiary;
+    opacity: 0;
+      transition-duration: .25s;
+  transition-timing-function: @cubicBezier;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  font-weight: 500;
+  top: 0;
+  margin-top: 12px;
+  padding: 12px 0;
+  margin: 0;
+  }
+
+.tab > ul li {
+  width: 100%;
+  padding: 12px 12px;
+  position: relative;
+  top: 20px;
+  opacity: 0;
+  transition-duration: 1.5s;
+
+}
+.tab > ul li:hover::before {
+  opacity: 1;
+    transition-duration: .25s;
+  transition-timing-function: @cubicBezier;
+}
+
+.tab:hover > ul {
+  transform: translate(-50%, 0);
+}
+.tab:hover > ul li {
+  top: 0;
+  opacity: 1;
+  transition-duration: 1.5s;
+
+}
+
 .wrapper {
-  width: 95%;
+  width: 94%;
   margin: 0 auto;
   border: 5px solid rgba(26, 25, 25, 0.2);
   padding: 10px;
   border-radius: 50px;
-  color: white;
+  color: @charcoal;
   font-weight: 400;
-  background-color: rgba(26, 25, 25, 0.7);
+  background-color: @secondary;
 }
 .button {
   -webkit-transition: 0.5s; /* For Safari 3.1 to 6.0 */
   transition: 0.5s;
   border-radius: 5px;
-  margin: 5px;
 }
 .button:hover {
-  border-bottom: 2px solid rgb(0, 204, 180);
-  color: rgb(0, 204, 180);
   cursor: pointer;
 }
 .page-top {
@@ -57,6 +121,11 @@ a {
   text-align: center;
 }
 /* nav content */
+.main-nav {
+ display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+}
 nav {
   display: flex;
   justify-content: center;
@@ -66,24 +135,28 @@ nav h2 {
   font-size: 16px;
   margin: 0;
 }
-.tab {
-  border-bottom: 2px solid white;
-  border-radius: 10px;
-  padding: 8px;
-  margin: 5px;
-  text-align: center;
+.tab h2 {
+  z-index: 2;
+  position: relative;
+  background: @secondary;
+    padding: 12px;
+
 }
+.tab {
+  text-align: center;
+  position: relative;
+  z-index:2;
+  width: 100%;
+}
+
 .active-tab {
-  border-bottom: 2px solid rgb(0, 204, 180);
-  color: rgb(0, 204, 180);
+  
 }
 
 /* About Me/Bio specific  */
-.question-box {
-  margin-top: 20px;
-}
+
 .question {
-  background-color: rgb(193, 61, 5);
+  background-color: @tertiary;
   padding: 5px;
   margin-bottom: 0px;
   margin-top: 30px;
@@ -126,12 +199,41 @@ nav h2 {
 .bio a,
 .contact-info a {
   display: inline-block;
-  border: 1px solid rgb(0, 204, 180);
   border-radius: 10px;
   text-decoration: none;
-  padding: 10px;
-  color: rgb(0, 204, 180);
-  box-shadow: 3px 3px rgb(0, 0, 0);
+  padding: 12px;
+  color: @charcoal;
+  background: @tertiary;
+  position: relative;
+
+}
+.bio a::before,
+.contact-info a::before {
+  color: @tertiary;
+  background: @primary;
+  font-weight:500;
+    content:attr(title);
+    opacity: 0;
+      transition-duration: .25s;
+  transition-timing-function: @cubicBezier;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 12px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+.bio a:hover,
+.contact-info a:hover{
+background: @secondary;
+color: @secondary;
+  
+}
+.bio a:hover::before,
+.contact-info a:hover::before {
+  opacity: 1;
+    transition-duration: .25s;
+  transition-timing-function: @cubicBezier;
 }
 .contact-info {
   width: 90%;
@@ -313,11 +415,7 @@ p {
     border-width: 4px;
   }
 
-  .bio a,
-  .contact-info a {
-    border: 2px solid rgb(0, 204, 180);
-    font-size: 20px;
-  }
+
   .contact-info h2 {
     font-size: 20px;
   }

@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>George Arnold Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+
     <script
       src="https://code.jquery.com/jquery-3.4.1.js"
       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -17,8 +17,7 @@
     ></script>
   </head>
   <body>
-    <div class="wrapper">
-      <nav>
+    <nav class="main-nav">
         <div class="tab tab-1 button">
           <h2>Projects</h2>
         </div>
@@ -28,7 +27,9 @@
         <div class="tab tab-3 button">
           <h2>Contact</h2>
         </div>
-      </nav>
+    </nav>
+    <div class="wrapper">
+
       <main class="bio">
         <h2 class="page-top">
           I'm George, a Full Stack Web Developer from
@@ -36,52 +37,45 @@
         </h2>
         <div class="questions-container">
           <section class="question-box">
-            <h4 class="question">Why do I love coding?</h4>
+            <h4 class="question">What is my coding journey?</h4>
             <p class="answer">
-              I have a knack for creative thinking, and I love solving problems.
-              I like to take things apart, figure out how they work, and put
-              them back together.
+               As a teacher, I quickly transitioned to teaching tech and computer science. I fell in love with coding because I have a knack for creative thinking, and I love solving problems. After discovering my love of code, I taught myself for a year. Looking to accelerate the self-teaching process, I enrolled in a web developer bootcamp, which provided me with a mentor, and the tools to get my skills up to date. 
             </p>
           </section>
           <section class="question-box">
             <h4 class="question">Why do you want me on your team?</h4>
             <p class="answer">
-              I have found success in multiple career fields, studied a myriad
-              of topics, and enjoyed a wide range of hobbies. It has made me
-              reliable, and provided me with an array of experiences to draw
-              from.
+              I have over a decade of work experience, and I'm a self-taught, highly driven developer.  I am always looking to learn new things, and I have acquired a myriad of skills beyond code that provide value in additon to my value as a developer. 
             </p>
           </section>
           <section class="question-box">
-            <h4 class="question">How am I surviving the pandemic?</h4>
+            <h4 class="question">What do I listen to while I code?</h4>
 
             <p class="answer">
-              Making and solving puzzles, coffee, D&D, and playing Jackbox
-              online with friends and family.
+              One of many instrumental playlists, with a range between low-fi beats, video game ambiance music, or custom mixes that combine the two.  One of my favorites is a remix that combines Legend of Zelda music with low-fi beats. You can find it on Spotify <a href="https://open.spotify.com/playlist/3OhVs5fNbkLe27XEvE6s7y" title="Here">Here</a>
             </p>
           </section>
           <section class="question-box">
-            <h4 class="question">What's the background picture?</h4>
+            <h4 class="question">How do I spend my free time?</h4>
             <p class="answer">
-              It's a nightime shot of a small town on the island of Crete, in
-              Greece, where my wife and I went on our honeymoon.
+              When I'm not spending time with my family, I have a handful of hobbies I look to.  I enjoy playing D&D and painting miniatures, before the pandemic I enjoyed playing weekly flag football. I like to do home improvement work on my home for the same reason I enjoy coding, I enjoy the entire process of problem solving, particularly finding joy in hard work. 
             </p>
           </section>
         </div>
         <div class="main-icon">
           <img src="images/Me.png" />
-          <a class="button" href="https://github.com/george-arnold">Git Hub</a>
+          <a class="button" title="Git Hub" href="https://github.com/george-arnold">Git Hub</a>
           <a
-            class="button"
+            class="button" title="Linked In"
             href="https://www.linkedin.com/in/george-arnold-4382a9120/"
             >Linked In</a
           >
-          <a class="button" href="mailto:george.arnold.88@gmail.com"
+          <a class="button" title="Email Me" href="mailto:george.arnold.88@gmail.com"
             >Email Me</a
           >
         </div>
       </main>
-      <main class="project">
+      <main class="project projects">
         <section class="project">
           <h2 class="dungeoneer-project page-top">The Dungeoneer's Toolkit</h2>
           <p class="about-project">

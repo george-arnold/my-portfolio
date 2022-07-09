@@ -28,16 +28,30 @@ function handleNavigation() {
     $(".contact-info").show();
   });
 
+
+
 }
 
-
-
-
+function indexProjects(list) {
+  let items = list.children().find("h2");
+  let unorderedList = $("<ul class='start-hidden'></ul>");
+  items.each( function (i, obj) {
+    console.log(i,obj);
+    let title = obj.innerText;
+    let lineItem = $("<li></li>").text(title);
+    lineItem.attr("title",title);
+    unorderedList.append(lineItem);
+  });
+  console.log(unorderedList);
+  $(".tab-1").append(unorderedList);
+}
 
 
 function start () {
     $(".project").hide();
     $(".contact-info").hide();
+    indexProjects($(".projects"));
     handleNavigation();
 }
+
 $(start);
