@@ -39,7 +39,9 @@ function indexProjects(list) {
     console.log(i,obj);
     let title = obj.innerText;
     let lineItem = $("<li></li>").text(title);
-    lineItem.attr("title",title);
+    let link= $("<a></a>").text(title)
+    link.attr("title",title);
+    link.attr("href","#")
     unorderedList.append(lineItem);
   });
   console.log(unorderedList);
@@ -50,7 +52,7 @@ function indexProjects(list) {
 function start () {
     $(".project").hide();
     $(".contact-info").hide();
-    indexProjects($(".projects"));
+    // indexProjects($(".projects"));
     handleNavigation();
 }
 

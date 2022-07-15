@@ -18,8 +18,9 @@ a {
   text-decoration: none;
 }
 .main-nav {
-  background: #9AD0EC;
   margin: -8px -16px 32px;
+  background: #9AD0EC;
+
 }
 .tab {
   position: relative;
@@ -32,9 +33,10 @@ a {
   align-items: center;
   row-gap: 8px;
   position: absolute;
-  background: #9AD0EC;
+  background: white;
+  border-radius: 0px 0px 4px 4px;
   left: 50%;
-  transform: translate(-50%, -200px);
+  transform: translate(-50%, -400px);
   transition-duration: 0.25s;
   transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
 }
@@ -122,6 +124,31 @@ nav h2 {
   position: relative;
   background: #9AD0EC;
   padding: 12px;
+  display: inline-block;
+  color: #28282B;
+
+
+}
+.tab h2:hover, .active-tab h2 {
+  color: black;
+}
+.tab h2::before {
+  content: "";
+  height: 2px;
+  background: #EFDAD7;
+  display: inline-block;
+  width:  30px;
+  position: absolute;
+  bottom:  10px;
+  left:  0;
+  transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-duration: 0.55s;
+  transition-property: width;
+}
+.tab h2:hover::before, .active-tab h2::before {
+  width:  100%;
+    transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67);
+  transition-duration: 0.5s;
 }
 .tab {
   text-align: center;
@@ -367,9 +394,7 @@ p {
   .tab {
     border-width: 4px;
   }
-  .button:hover {
-    border-width: 4px;
-  }
+
   .contact-info h2 {
     font-size: 20px;
   }
